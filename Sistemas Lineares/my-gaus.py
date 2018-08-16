@@ -55,7 +55,7 @@ class Gaus:
         B = np.array([self.storage_matrix[:,-1]]).T #pega a transposta da matriz B
         AxB = np.hstack((Ax, B)) #Junta a matriz novamente
         
-        for equation in AxB:
+        for equation in AxB:    
             #Os dois lados da equação devem ser o mesmo valor, logo se sua divisão não acarretar em 1, o algoritmo é falho
             if (equation[-1] / np.sum(equation[:-1]) != 1.):
                 return False
